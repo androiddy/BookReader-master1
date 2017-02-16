@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    app:cardCornerRadius="1dp"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="3dp"
+    android:focusable="false"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:padding="2dp" >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="172dp"
+    android:orientation="horizontal">
+    <TextView
+        android:textSize="15dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+        android:textColor="#383737"
+        android:text="dsdsdsdsds"
+        android:id="@+id/item_nfplvadapter_duotu_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" />
+    <LinearLayout
+        android:layout_below="@+id/item_nfplvadapter_duotu_title"
+        android:clickable="false"
+        android:focusable="false"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_above="@+id/item_nfplvadapter_duotu_source">
+
+        <ImageView
+            android:paddingRight="3dp"
+            android:paddingLeft="5dp"
+            android:id="@+id/item_nfplvadapter_duotu_img1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.99" />
+
+        <ImageView
+            android:paddingRight="3dp"
+            android:paddingLeft="3dp"
+            android:id="@+id/item_nfplvadapter_duotu_img2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="0.99" />
+
+        <ImageView
+            android:paddingLeft="3dp"
+            android:paddingRight="5dp"
+            android:id="@+id/item_nfplvadapter_duotu_img3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="0.99" />
+    </LinearLayout>
+
+    <TextView
+        android:paddingLeft="5dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="ddd"
+        android:id="@+id/item_nfplvadapter_duotu_source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
+
+</android.support.v7.widget.CardView>

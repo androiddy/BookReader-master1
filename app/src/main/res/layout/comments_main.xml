@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/include_toolbar" />
+    <com.appbook.book.widget.VRefresh
+        android:id="@+id/srlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appbar"
+        android:layout_above="@+id/comment_vg_lyt">
+    <ListView
+        android:visibility="visible"
+        android:id="@+id/lidttt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/comment_vg_lyt"
+        android:layout_below="@+id/appbar" />
+</com.appbook.book.widget.VRefresh>
+    <LinearLayout
+        android:id="@+id/comment_vg_lyt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/solid_line"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <!--评论框-->
+        <LinearLayout
+            android:id="@+id/lyt_comment"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/corners_bg"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="评论一下"
+                android:textColor="#A1A1A1"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <com.appbook.book.widget.NoTouchLinearLayout
+        android:id="@+id/edit_vg_lyt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#77030303"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <LinearLayout
+            android:id="@+id/ll_comment_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F1F1F1"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp">
+            <!-- 输入框 -->
+            <EditText
+                android:id="@+id/edit_comment"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_bg"
+                android:gravity="left"
+                android:inputType="textMultiLine"
+                android:maxLength="40"
+                android:maxLines="6"
+                android:minHeight="120dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="可撰写字40字"
+                        android:textColor="#848484" />
+
+                </LinearLayout>
+
+
+                <CheckBox
+                    android:id="@+id/checkbox_anonymous"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:checked="false"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="匿名发布"
+                    android:textColor="#848484"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp">
+
+                <Button
+                    android:id="@+id/but_comment_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/button_comment"
+                    android:text="发表"
+                    android:textColor="#ffffff" />
+            </RelativeLayout>
+        </LinearLayout>
+    </com.appbook.book.widget.NoTouchLinearLayout>
+
+    <RelativeLayout
+        android:background="#ffffff"
+        android:id="@+id/refreshLayout1"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="425dp"
+        android:layout_weight="0.90"
+        android:layout_below="@+id/appbar"
+        android:layout_toRightOf="@+id/edit_vg_lyt"
+        android:layout_toEndOf="@+id/edit_vg_lyt"
+        android:layout_above="@+id/comment_vg_lyt">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/rotate_loading_github"
+            android:indeterminateDuration="1800"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:background="#ffffff"
+        android:id="@+id/refreshLayout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/comment_vg_lyt"
+        android:layout_below="@+id/appbar">
+
+
+        <TextView
+            android:text="获取数据失败！请重新获取！"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/textView3"
+            android:layout_below="@+id/imageView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:paddingTop="5dp"
+            android:textColor="#2c98f7"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:text="重新加载"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:layout_below="@+id/textView3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/app_no_data_icon"
+            android:layout_marginTop="158dp"
+            android:id="@+id/imageView2"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/global_search_action_bar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#00897b"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:padding="10dp"
+            android:id="@+id/search_iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/back"/>
+
+        <EditText
+            android:id="@+id/et_search_content"
+            android:layout_width="150dp"
+            android:layout_height="34dp"
+            android:background="@drawable/round_white_btn_bg"
+            android:gravity="start|center_vertical"
+            android:hint="@string/str_search_hint"
+            android:imeOptions="actionSearch"
+            android:maxLength="15"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:singleLine="true"
+            android:textSize="13sp"
+            android:layout_alignTop="@+id/search_iv_back"
+            android:layout_toRightOf="@+id/search_iv_back"
+            android:layout_toLeftOf="@+id/textView6"
+ />
+
+        <ImageView
+            android:id="@+id/search_clear_content_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:src="@mipmap/login_icon_edit_clear"
+            android:visibility="visible"
+            android:layout_alignBottom="@+id/search_iv_back"
+            android:layout_toLeftOf="@+id/textView6"
+            android:layout_toStartOf="@+id/textView6" />
+
+        <TextView
+            android:textSize="16dp"
+            android:text="搜索"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_search"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:clickable="true"-->
+        <!--android:onClick="StartSearch"-->
+        <!--android:paddingBottom="14dp"-->
+        <!--android:paddingLeft="15dp"-->
+        <!--android:paddingRight="14dp"-->
+        <!--android:paddingTop="14dp"-->
+        <!--android:text="@string/search"-->
+        <!--android:textColor="@color/colorWhite"-->
+        <!--android:textSize="14sp"/>-->
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/global_search_action_bar_rl">
+        <com.appbook.book.widget.VRefresh
+            android:id="@+id/srlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="gone"
+            android:layout_below="@+id/global_search_action_bar_rl">
+            <ListView
+                android:id="@+id/lv_search_history"
+                style="@style/common_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/default_line_color"
+                android:dividerHeight="0.5dp"
+                android:listSelector="@drawable/list_item_selector">
+            </ListView>
+</com.appbook.book.widget.VRefresh>
+
+
+        <LinearLayout
+
+            android:id="@+id/ll_search_results"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+        <TextView
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:text="搜索热词"
+            android:paddingBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7" />
+            <View
+                android:background="#e7e7e7"
+                android:layout_width="408dp"
+                android:layout_height="1dp"/>
+            <GridView
+                android:id="@+id/grid"
+                android:numColumns="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <!--<ViewStub-->
+        <!--android:id="@+id/vs_net_error"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout="@layout/net_error"/>-->
+
+        <!--<ViewStub-->
+        <!--android:id="@+id/vs_blank_content"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout="@layout/blank_content"/>-->
+
+        <ScrollView
+            android:visibility="gone"
+            android:id="@+id/scrollViews"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+
+                android:layout_toRightOf="@+id/ivRecommendCover"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivRecommendCover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/search_error2"
+                    android:layout_marginStart="65dp"
+                    android:layout_alignBottom="@+id/textView15"
+                    android:layout_alignParentStart="true" />
+
+
+                <TextView
+                    android:paddingBottom="2dp"
+                    android:text="抱歉!暂无相关搜索结果"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="42dp"
+                    android:id="@+id/textView15"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/ivRecommendCover" />
+
+
+            </RelativeLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#d8d8d8"
+                />
+            <com.appbook.book.widget.ListViewForScrollView
+                android:id="@+id/Listview"
+                android:layout_width="match_parent"
+                android:layout_height="611dp"
+                android:layout_weight="66" />
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+
+</RelativeLayout>

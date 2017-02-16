@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="actionsheet_gray">#8F8F8F</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_red">#FD4A2E</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+
+    <color name="base_shallow_black">#818181</color>
+    <!--标题栏的颜色-->
+    <color name="colorPrimary">#3B99DF</color>
+    <!--状态栏的颜色-->
+    <color name="colorPrimaryDark">#3B90DF</color>
+    <!--控件的选中颜色，即checked或selected状态的颜色。-->
+    <color name="colorAccent">#3B99DF</color>
+    <color name="dividerColor">#ffe6e6e6</color>
+    <color name="tip">#88303F9F</color>
+    <color name="status_color">#56abe4</color>
+    <color name="colorWhite">#fff</color>
+    <color name="text_gray">#7b403b37</color>
+    <color name="default_line_color">#e6e6e6</color>
+    <color name="list_item_focus">#0a000000</color>
+    <color name="white_alpha_percent_45">#73ffffff</color>
+    <color name="light_black_color">#3B3B3B</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#DE6014</color>
+    <color name="gray">#b8b8b8</color>
+    <color name="green">#5FB236</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="tab_unselect">#c9c9c9</color>
+    <color name="light_white">#EEEEEE</color>
+    <color name="light_black">#515151</color>
+    <color name="light_pink">#fb9090</color>
+    <color name="light_coffee">#A58D5E</color>
+    <color name="light_gray">#AAAAAA</color>
+    <color name="light_red">#EC4A48</color>
+    <color name="light_blue">#039BE5</color>
+    <color name="dark_red">#B93221</color>
+
+    <!--通用背景色-->
+    <color name="common_bg">@color/white</color>
+    <!--通用触摸背景色-->
+    <color name="common_touch_bg">#E3E3E3</color>
+    <!--通用背景色-->
+    <color name="common_gray_bg">#EEEEEE</color>
+    <!--通用一级标题的颜色-->
+    <color name="common_h1">#212121</color>
+    <!--通用二级标题的颜色-->
+    <color name="common_h2">#727272</color>
+    <!--通用三级标题的颜色-->
+    <color name="common_h3">#B2B2B2</color>
+    <!--通用分割线细-->
+    <color name="common_divider_narrow">#E3E3E3</color>
+    <!--通用分割线粗-->
+    <color name="common_divider_wide">@color/light_white</color>
+
+    <color name="reader_menu_bg_color">#191919</color>
+    <color name="read_theme_white">#ffffff</color>
+    <color name="read_theme_green">#bed0cf</color>
+    <color name="read_theme_yellow">#e6dbbf</color>
+    <color name="read_theme_gray">#AAAAAA</color>
+    <color name="read_theme_night">#000000</color>
+
+    <!--章节标题夜间颜色-->
+    <color name="chapter_title_night">#292929</color>
+    <!--章节内容夜间颜色-->
+    <color name="chapter_content_night">#444444</color>
+    <!--章节标题日间颜色-->
+    <color name="chapter_title_day">#837B63</color>
+    <!--章节内容夜间颜色-->
+    <color name="chapter_content_day">#3B3220</color>
+    <!--阅读页顶部字体颜色-->
+    <color name="book_read_top_text">#D1D1D1</color>
+    <!--阅读页底部字体颜色-->
+    <color name="book_read_bottom_text">#888888</color>
+
+    <!--性别选择颜色值-->
+    <color name="gender_select_male_normal">#B0E2FF</color>
+    <color name="gender_select_male_pressed">#B2DFEE</color>
+    <color name="gender_select_female_normal">#EEA9B8</color>
+    <color name="gender_select_female_pressed">#EEA2AD</color>
+    <color name="primary">#009688</color>
+    <color name="primary_dark">#00897b</color>
+    <color name="primary_light">#B2DFDB</color>
+    <color name="accent">#ffb74d</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="light_grey">#E8E8E8</color>
+
+    <color name="window_background">#ffffff</color>
+    <color name="tab_bgcolor">#eeeeee</color>
+
+    <color name="google_red">#d62d20</color>
+    <color name="google_blue">#0057e7</color>
+    <color name="google_green">#008744</color>
+    <color name="google_yellow">#ffa700</color>
+</resources>

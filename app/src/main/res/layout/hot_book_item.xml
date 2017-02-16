@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.appbook.book.ViewUtils.CardViews xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/card_margin"
+    android:layout_marginLeft="@dimen/card_margin"
+    android:layout_marginRight="@dimen/card_margin"
+    android:clickable="true"
+    android:transitionName="transition_book_line"
+
+    android:descendantFocusability="blocksDescendants"
+    app:cardBackgroundColor="#ffffffff"
+    app:cardUseCompatPadding="true">
+
+    <com.appbook.book.ViewUtils.MarqueeTextView
+        android:gravity="center"
+        android:textColor="#000000"
+        android:text="TextView"
+        android:focusable="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/textView8" />
+
+    <LinearLayout
+        style="@style/CardView.Content"
+
+        android:layout_width="match_parent"
+        android:id="@+id/line1"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+</com.appbook.book.ViewUtils.CardViews>

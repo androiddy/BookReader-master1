@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="192dp"
+    android:background="?attr/colorPrimaryDark"
+    android:paddingTop="15dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="3dp"
+
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <com.appbook.book.ViewUtils.CircleImageView
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@mipmap/icon"
+        android:id="@+id/XCRoundImageView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:visibility="gone"
+        android:gravity="center"
+        android:id="@+id/id_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:text="毒瘾"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:textSize="25.0px"
+        android:textColor="@color/white"
+        android:id="@+id/btn_master_shs"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:text="点击登录"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

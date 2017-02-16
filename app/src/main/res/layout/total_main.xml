@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+<LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:id="@+id/toolbar13">
+
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/include_toolbar" />
+
+</LinearLayout>
+    <View
+        android:layout_below="@+id/toolbar13"
+        android:id="@+id/toolbar_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/toolbar_dropshadow" />
+
+
+
+    <com.appbook.book.widget.NoScrollViewPager
+            android:id="@+id/viewpager"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar_shadow"
+        android:layout_above="@+id/tab" />
+    <com.appbook.book.ViewUtils.PagerTabLayout
+        android:id="@+id/tab"
+        app:elevation="8dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+    <View
+        android:id="@+id/toolbar_shadows"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/toolbar_dropshadows"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/viewpager" />
+    </RelativeLayout>
+    <android.support.design.widget.NavigationView
+        android:layout_below="@+id/toolbar13"
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/drawer" />
+</android.support.v4.widget.DrawerLayout>

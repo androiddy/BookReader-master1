@@ -1,0 +1,44 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity" >
+    <item
+        android:id="@+id/action_search"
+        android:orderInCategory="80"
+        android:title="action_search"
+        android:icon="@drawable/abc_ic_search_api_mtrl_alpha"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_my_login"
+        android:title="登录"
+        android:icon="@mipmap/ic_feedback"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_my_message"
+        android:title="用户反馈"
+        android:icon="@mipmap/ic_feedback"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_sync_bookshelf"
+        android:title="检查更新"
+        android:icon="@mipmap/ic_updates"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_chah"
+        android:title="清理缓存"
+        android:icon="@mipmap/is_qingli"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_guanyu"
+        android:title="关于我们"
+        android:icon="@mipmap/ic_about"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_scan_local_book"
+        android:title="@string/menu_main_scan_local_book"
+        android:icon="@mipmap/is_saomio"
+        app:showAsAction="never" />
+
+</menu>

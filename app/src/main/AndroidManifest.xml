@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.appbook.book">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <application
+        android:name="com.appbook.book.MyRunApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name="com.appbook.book.MainActivity"
+            android:theme="@style/AppTheme"  android:screenOrientation="portrait" >
+
+        </activity>
+        <activity
+            android:name="com.appbook.book.ReadActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.appbook.book.ScanLocalBookActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.appbook.book.BookDetailActivity"
+            android:theme="@style/AppTheme"  android:windowSoftInputMode="adjustResize"  android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name="com.cwvs.microlife.searchview.SearchActivity"
+          android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fragment.main.CategoryListActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".fragment.main2.MessageIndexctivity"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"/>
+        <activity  android:name=".SplashActivity"   android:screenOrientation="portrait">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:noHistory="true"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent101373848" />
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation"    android:theme="@android:style/Theme.Translucent.NoTitleBar"  android:name=".User.LoginActivity"  android:screenOrientation="portrait"/>
+        <activity android:windowSoftInputMode="adjustResize"  android:name=".CommentsActvivty"  android:theme="@style/AppTheme"  android:screenOrientation="portrait"/>
+
+        <activity  android:name=".TotalMainActivity"  android:theme="@style/AppTheme"  android:screenOrientation="portrait"/>
+    <activity android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+
+        <service android:name=".updata.Service.DownLoadService"/>
+    </application>
+
+</manifest>

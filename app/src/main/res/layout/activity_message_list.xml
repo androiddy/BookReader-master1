@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TabLayout
+        android:visibility="gone"
+        android:id="@+id/tab_FindFragment_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/primary"
+        app:tabSelectedTextColor="@color/primary"
+        app:tabTextColor="#000000"
+        />
+    <View
+        android:layout_below="@+id/toolbar13"
+        android:id="@+id/toolbar_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/toolbar_dropshadow" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_FindFragment_pager"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.98"
+        />
+    <RelativeLayout
+        android:background="#ffffff"
+        android:id="@+id/refreshLayout1"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="425dp"
+        android:layout_below="@+id/global_search_action_bar_rl"
+        android:layout_weight="0.90">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/rotate_loading_github"
+            android:indeterminateDuration="1800"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+        <RelativeLayout
+            android:background="#ffffff"
+            android:id="@+id/refreshLayout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+
+            <TextView
+                android:text="获取数据失败！请重新获取！"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/textView3"
+                android:layout_below="@+id/imageView2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:paddingTop="5dp"
+                android:textColor="#2c98f7"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:text="重新加载"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:layout_below="@+id/textView3"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/app_no_data_icon"
+                android:layout_marginTop="158dp"
+                android:id="@+id/imageView2"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+
+</LinearLayout>

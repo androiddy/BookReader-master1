@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/include_toolbar" />
+
+
+         <ListView
+          android:id="@+id/recyclerView"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_below="@+id/appbar"
+          android:scrollbars="none"
+          android:divider="@null"
+          android:background="@color/light_grey"
+          />
+
+
+</RelativeLayout>
